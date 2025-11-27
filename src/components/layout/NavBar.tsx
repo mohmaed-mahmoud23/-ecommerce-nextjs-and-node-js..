@@ -28,16 +28,19 @@ export default function Navbar() {
               Home
             </Button>
           </Link>
-          <Button
-            variant={"ghost"}
-            className={`px-4 py-2 rounded transition   font-bold ${
-              pathname === "/Products"
-                ? "bg-black text-white"
-                : "hover:bg-black hover:text-white"
-            }`}
-          >
-            Products
-          </Button>
+          <Link href="/ProdactPage">
+            <Button
+              variant={"ghost"}
+              className={`px-4 py-2 rounded transition   font-bold ${
+                pathname === "/Products"
+                  ? "bg-black text-white"
+                  : "hover:bg-black hover:text-white"
+              }`}
+            >
+              Products
+            </Button>
+          </Link>
+
           <Button
             variant={"ghost"}
             className={`px-4 py-2 rounded transition   font-bold ${
