@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    domains: ["ecommerce.routemisr.com"], // أضف أي دومين خارجي هنا
+  },};
 
 export default nextConfig;

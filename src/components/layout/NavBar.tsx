@@ -4,7 +4,7 @@ import { Search, User, Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/Button";
 import { usePathname } from "next/navigation";
-
+import Link from "next/link";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -16,16 +16,18 @@ export default function Navbar() {
 
         {/* اللينكات - تظهر فقط من MD وطالع */}
         <div className="hidden md:flex gap-6">
-          <Button
-            variant={"ghost"}
-            className={`px-4 py-2 rounded transition  font-bold  ${
-              pathname === "/"
-                ? "bg-black text-white"
-                : "hover:bg-black hover:text-white"
-            }`}
-          >
-            Home
-          </Button>
+          <Link href="/">
+            <Button
+              variant={"ghost"}
+              className={`px-4 py-2 rounded transition  font-bold  ${
+                pathname === "/"
+                  ? "bg-black text-white"
+                  : "hover:bg-black hover:text-white"
+              }`}
+            >
+              Home
+            </Button>
+          </Link>
           <Button
             variant={"ghost"}
             className={`px-4 py-2 rounded transition   font-bold ${
