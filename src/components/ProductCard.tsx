@@ -59,7 +59,7 @@ export default function ProductCard({ prodact }: ProductCardProps) {
         </p>
       </CardContent>
       <CardFooter>
-        <Button className="max-w-full" variant={"default"}>
+        <Button className="w-full" variant={"default"}>
           Buy NOw
         </Button>
       </CardFooter>
