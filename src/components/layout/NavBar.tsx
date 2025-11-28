@@ -69,9 +69,26 @@ export default function Navbar() {
       {/* المنيو للموبايل */}
       {open && (
         <div className="mt-4 flex flex-col gap-3  md:hidden">
-          <button className="bg-gray-200 px-4 py-2 rounded">Home</button>
-          <button className="bg-gray-200 px-4 py-2 rounded">Products</button>
-          <button className="bg-gray-200 px-4 py-2 rounded">Contact</button>
+          <Link href={"/"}>
+            <Button
+              variant={"outline"}
+              className="bg-gray-200 px-4 py-2 rounded w-full"
+            >
+              Home
+            </Button>
+          </Link>
+          <Link className="w-full" href="/ProdactPage">
+            <Button
+              variant={"outline"}
+              className="bg-gray-200 px-4    text-black  py-2 rounded w-full"
+            >
+              Products
+            </Button>
+          </Link>
+
+          <Button variant={"outline"} className="bg-gray-200 px-4 py-2 rounded">
+            Contact
+          </Button>
         </div>
       )}
     </nav>

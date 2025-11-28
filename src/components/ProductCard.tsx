@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import { Product } from "@/interfaces/prudacts";
+import { Button } from "./ui/Button";
 
 interface ProductCardProps {
   prodact: Product;
@@ -57,6 +58,11 @@ export default function ProductCard({ prodact }: ProductCardProps) {
           £{prodact?.price.toLocaleString()}
         </p>
       </CardContent>
+      <CardFooter>
+        <Button className="max-w-full" variant={"default"}>
+          Buy NOw
+        </Button>
+      </CardFooter>
     </Card>
   );
 }
