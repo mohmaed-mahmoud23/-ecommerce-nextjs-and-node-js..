@@ -2,7 +2,24 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["ecommerce.routemisr.com"], // أضف أي دومين خارجي هنا
-  },};
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ecommerce.routemisr.com",
+        pathname: "/Route-Academy-products/*",
+      },
+      {
+        protocol: "https",
+        hostname: "ecommerce.routemisr.com",
+        pathname: "/Route-Academy-categories/*",
+      },
+      {
+        protocol: "https",
+        hostname: "ecommerce.routemisr.com",
+        pathname: "/Route-Academy-brands/*",
+      },
+    ],
+  },
+};
 
 export default nextConfig;
